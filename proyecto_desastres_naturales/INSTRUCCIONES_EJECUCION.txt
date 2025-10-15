@@ -1,0 +1,101 @@
+================================================================================
+INSTRUCCIONES DE EJECUCIÓN - PROYECTO DESASTRES NATURALES
+================================================================================
+
+PASO 1: INSTALAR DEPENDENCIAS
+------------------------------
+Ejecutar en la terminal:
+
+  pip install -r requirements.txt
+
+
+PASO 2: VERIFICAR RUTA DEL DATASET
+-----------------------------------
+El dataset debe estar en la carpeta padre del proyecto:
+
+  ../1970-2021_DISASTERS.xlsx - emdat data.csv
+
+Si está en otra ubicación, actualizar la ruta en:
+  - main.py (línea 146)
+  - analisis_desastres_naturales.ipynb (celda de carga)
+
+
+PASO 3: EJECUTAR EL ANÁLISIS
+-----------------------------
+
+OPCIÓN A - Script Python (rápido):
+
+  python main.py
+
+  Esto ejecutará todo el proceso ETL y mostrará visualizaciones.
+
+
+OPCIÓN B - Jupyter Notebook (recomendado para entrega):
+
+  jupyter notebook analisis_desastres_naturales.ipynb
+
+  El notebook contiene:
+  ✓ Código ejecutable paso a paso
+  ✓ Visualizaciones integradas
+  ✓ Apreciaciones críticas de cada análisis
+  ✓ Interpretaciones y conclusiones
+
+
+ESTRUCTURA DEL PROYECTO
+------------------------
+
+proyecto_desastres_naturales/
+├── extract/                     # Módulo de extracción
+│   ├── __init__.py
+│   └── extract_data.py
+├── transform/                   # Módulo de transformación
+│   ├── __init__.py
+│   ├── temporal_transform.py
+│   └── data_curation.py
+├── load/                        # Módulo de carga/visualización
+│   ├── __init__.py
+│   └── visualizaciones.py
+├── main.py                      # Script principal
+├── analisis_desastres_naturales.ipynb  # Notebook completo
+├── README.md                    # Documentación detallada
+├── requirements.txt             # Dependencias
+└── INSTRUCCIONES_EJECUCION.txt  # Este archivo
+
+
+FUNCIONALIDADES IMPLEMENTADAS
+------------------------------
+
+✓ Extracción: Carga y validación del dataset
+✓ Transformación Temporal: Unificación de fechas, análisis estacional
+✓ Curación de Datos: Limpieza de tipos y regiones
+✓ Análisis de Tendencias: Patrones temporales últimas 2 décadas
+✓ Visualizaciones: Series temporales, heatmaps, gráficos de barras
+✓ 5 Cruces de Variables:
+  1. Distribución geográfica de terremotos
+  2. Regiones con mayor incidencia de inundaciones
+  3. Patrones regionales de sequías
+  4. Frecuencia de tormentas por continente
+  5. Tendencia histórica de incendios forestales
+
+
+SOLUCIÓN DE PROBLEMAS
+----------------------
+
+Error: "No se encontró el archivo"
+→ Verificar ruta del dataset en main.py y notebook
+
+Error: "ModuleNotFoundError"
+→ Instalar dependencias: pip install -r requirements.txt
+
+Error al importar módulos en notebook
+→ Verificar que estás ejecutando desde el directorio correcto
+
+
+CONTACTO
+--------
+
+Para consultas sobre el proyecto:
+Nicolás Bargioni
+Procesamiento de Datos - TP1
+
+================================================================================
